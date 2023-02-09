@@ -1,4 +1,4 @@
-USE SCHEMA DEMO.PUBLIC;
+USE SCHEMA DEMOT.PUBLIC;
 
 INSERT INTO emp(PersonID , LastName , FirstName, Address , City)
 VALUES (2, 'Erichsen', 'wxy', 'abc2','Norway');
