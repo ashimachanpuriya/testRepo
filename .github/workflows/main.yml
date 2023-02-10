@@ -3,7 +3,7 @@ name: showcase_cicd_snowflake
 on:
   push:
     branches:
-      - main
+      - test
     paths:
       - 'dbscripts/**'
       
@@ -24,12 +24,12 @@ jobs:
           
       - name: Run schemachange
         env:
-          SF_ACCOUNT: ${{secrets.SF_ACCOUNT}}
-          SF_USERNAME: ${{secrets.SF_USERNAME}}
-          SF_ROLE: ${{secrets.SF_ROLE}}
-          SF_WAREHOUSE: ${{secrets.SF_WAREHOUSE}}
-          SF_DATABASE: ${{secrets.SF_DATABASE}}
-          SNOWFLAKE_PASSWORD: ${{secrets.SF_PASSWORD}}
+          SF_ACCOUNT: ${{secrets.SF_ACCOUNT1}}
+          SF_USERNAME: ${{secrets.SF_USERNAME1}}
+          SF_ROLE: ${{secrets.SF_ROLE1}}
+          SF_WAREHOUSE: ${{secrets.SF_WAREHOUSE1}}
+          SF_DATABASE: ${{secrets.SF_DATABASE1}}
+          SNOWFLAKE_PASSWORD: ${{secrets.SF_PASSWORD1}}
         run:  |
           echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
           python --version
@@ -37,4 +37,4 @@ jobs:
           pip install schemachange
           
           echo "Step 2: Running Schemachange"
-          schemachange -f $GITHUB_WORKSPACE/dbscripts -a $SF_ACCOUNT -u Ashima -r $SF_ROLE -w $SF_WAREHOUSE -d $SF_DATABASE -c $SF_DATABASE.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table
+          schemachange -f $GITHUB_WORKSPACE/dbscripts -a $SF_ACCOUNT1 -u Ashima -r $SF_ROLE1 -w $SF_WAREHOUSE1 -d $SF_DATABASE1 -c $SF_DATABASE1.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table
