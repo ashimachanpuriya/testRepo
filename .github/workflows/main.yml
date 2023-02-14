@@ -27,7 +27,7 @@ jobs:
           SF_ACCOUNT: ${{secrets.SF_ACCOUNT1}}
           SF_USERNAME: ${{secrets.SF_USERNAME1}}
           SF_ROLE: ${{secrets.SF_ROLE}}
-          SF_WAREHOUSE: ${{secrets.SF_WAREHOUSE1}}
+          SF_WAREHOUSE: ${{secrets.SF_WAREHOUSE}}
           SF_DATABASE: ${{secrets.SF_DATABASE1}}
           SNOWFLAKE_PASSWORD: ${{secrets.SF_PASSWORD1}}
         run:  |
