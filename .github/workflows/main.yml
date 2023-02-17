@@ -3,9 +3,9 @@ name: showcase_cicd_snowflake
 on:
   push:
     branches:
-      - main
+      - t1
     paths:
-      - 'dbscripts/**'
+      - 'dbscriptst1/**'
       
   workflow_dispatch:
   
