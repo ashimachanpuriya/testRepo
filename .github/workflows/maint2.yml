@@ -1,4 +1,4 @@
-name: showcase_cicd_snowflake
+name: showcase_cicd_snowflaket2
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
   
 jobs:
-  snowflake-cicd-showcase:
+  snowflake-cicd-showcaset2:
     runs-on: ubuntu-latest
     
     steps:  
